@@ -64,18 +64,6 @@ public class Counter {
 		_ctr = -99;
 	}
 
-	// Check if a number is prime
-	private boolean isPrime(int n) {
-		if (n <= 1) {
-			return false;
-		}
-		for (int i = 2; i <= Math.sqrt(n); i++) {
-			if (n % i == 0) {
-				return false;
-			}
-		}
-		return true;
-	}
 
 	// TODO: dev3- count the frequency of word in sentence,
 	// refactor source code from dev1 and dev2
