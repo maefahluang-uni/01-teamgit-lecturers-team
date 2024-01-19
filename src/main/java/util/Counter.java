@@ -28,14 +28,30 @@ public class Counter {
 		_ctr = _ctr * _multiplier; // no fault here
 	}
 
-	// TODO: dev1- method for increment to closest even number
 	public void incrementToEven() {
-		_ctr = -99;
+		increment();
+		// Check if the current value of _ctr is even
+		if (_ctr % 2 == 0) {
+			// Already even, no need to increment
+			System.out.println("Counter is already even.");
+		} else {
+			// Increment to the closest even number
+			_ctr = (_ctr % 2 == 0) ? _ctr : _ctr + 1;
+			System.out.println("Incremented to the closest even number.");
+		}
 	}
 
-	// TODO: dev1- method for decrement to closest even number
 	public void decrementToEven() {
-		_ctr = -99;
+		decrement();
+		// Check if the current value of _ctr is even
+		if (_ctr % 2 == 0) {
+			// Already even, no need to decrement
+			System.out.println("Counter is already even.");
+		} else {
+			// Decrement to the closest even number
+			_ctr = (_ctr % 2 == 0) ? _ctr : _ctr - 1;
+			System.out.println("Decremented to the closest even number.");
+		}
 	}
 
 	// TODO: dev2- method for increment to closest prime number
@@ -47,6 +63,7 @@ public class Counter {
 	public void decrementToPrime() {
 		_ctr = -99;
 	}
+
 
 	// TODO: dev3- count the frequency of word in sentence,
 	// refactor source code from dev1 and dev2
